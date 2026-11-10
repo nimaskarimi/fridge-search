@@ -1,0 +1,33 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build-and-test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+      - name: Build
+        run: cmake --build build -j
+      - name: Test
+        run: ctest --test-dir build --output-on-failure
+      - name: Benchmark (smoke run)
+        run: ./build/recipe_bench --recipes 20000 --queries 1000
+
+  ios-app:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate Xcode project
+        run: |
+          brew install xcodegen
+          cd ios && xcodegen
+      - name: Build for the iOS Simulator
+        run: >
+          xcodebuild -project ios/FridgeSearch.xcodeproj -target FridgeSearch
+          -sdk iphonesimulator -configuration Debug CODE_SIGNING_ALLOWED=NO build

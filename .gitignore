@@ -1,0 +1,9 @@
+build/
+.vscode/
+.idea/
+*.xcodeproj/
+.DS_Store
+
+# Large datasets: download from Kaggle, don't commit
+data/RAW_*.csv
+data/foodcom.tsv

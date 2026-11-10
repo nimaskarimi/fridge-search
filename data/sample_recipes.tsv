@@ -1,0 +1,32 @@
+# name	rating	ingredients (pipe-separated)
+# A small hand-written set for trying the engine. Use scripts/prepare_foodcom.py for the real dataset.
+Chocolate Chip Cookies	4.8	all-purpose flour|butter|brown sugar|white sugar|eggs|vanilla extract|baking soda|salt|chocolate chips
+Brown Butter Cookies	4.9	all-purpose flour|butter|brown sugar|eggs|vanilla extract|baking soda|salt
+Sugar Cookies	4.3	all-purpose flour|butter|white sugar|eggs|vanilla extract|baking powder|salt
+Snickerdoodles	4.6	all-purpose flour|butter|white sugar|eggs|cream of tartar|baking soda|cinnamon|salt
+Peanut Butter Cookies	4.4	peanut butter|white sugar|eggs
+Fudgy Brownies	4.7	butter|white sugar|eggs|cocoa powder|all-purpose flour|vanilla extract|salt
+Banana Bread	4.8	bananas|all-purpose flour|butter|white sugar|eggs|baking soda|salt|vanilla extract
+Blueberry Muffins	4.5	all-purpose flour|white sugar|eggs|milk|vegetable oil|baking powder|blueberries|salt
+Buttermilk Pancakes	4.7	all-purpose flour|buttermilk|eggs|butter|white sugar|baking powder|baking soda|salt
+Classic Pancakes	4.4	all-purpose flour|milk|eggs|butter|white sugar|baking powder|salt
+French Toast	4.5	bread|eggs|milk|cinnamon|vanilla extract|butter
+Crepes	4.2	all-purpose flour|milk|eggs|butter|salt
+Lemon Bars	4.6	all-purpose flour|butter|powdered sugar|eggs|white sugar|lemons
+Pound Cake	4.5	butter|white sugar|eggs|all-purpose flour|vanilla extract|salt
+Scrambled Eggs	4.1	eggs|butter|milk|salt|black pepper
+Cheese Omelette	4.3	eggs|butter|cheddar cheese|salt|pepper
+Shakshuka	4.7	eggs|tomatoes|onion|garlic|olive oil|cumin|paprika|salt
+Grilled Cheese	4.4	bread|butter|cheddar cheese
+Tomato Basil Pasta	4.5	spaghetti|tomatoes|garlic|olive oil|fresh basil|parmesan cheese|salt
+Garlic Butter Shrimp	4.6	shrimp|butter|garlic|lemons|parsley|salt
+Chicken Stir Fry	4.3	chicken breast|soy sauce|garlic|ginger|broccoli|bell peppers|vegetable oil|rice
+Guacamole	4.8	avocados|limes|onion|cilantro|jalapeno|salt
+Caprese Salad	4.6	tomatoes|fresh mozzarella|fresh basil|olive oil|balsamic vinegar|salt
+Saffron Risotto	4.7	arborio rice|saffron|onion|butter|parmesan cheese|chicken broth|white wine
+Mac and Cheese	4.5	elbow macaroni|cheddar cheese|milk|butter|all-purpose flour|salt
+Oatmeal Raisin Cookies	4.4	rolled oats|all-purpose flour|butter|brown sugar|eggs|raisins|cinnamon|baking soda|salt
+Peach Cobbler	4.7	peaches|all-purpose flour|white sugar|butter|milk|baking powder|cinnamon
+Cinnamon Rolls	4.8	all-purpose flour|yeast|milk|butter|white sugar|brown sugar|cinnamon|eggs|powdered sugar|cream cheese
+Hard Boiled Eggs	4.0	eggs|water
+Lemonade	4.2	lemons|white sugar|water

@@ -1,0 +1,52 @@
+# XcodeGen spec. Generate the Xcode project with:
+#   brew install xcodegen
+#   cd ios && xcodegen
+# The generated FridgeSearch.xcodeproj is not committed; this file is the source of truth.
+
+name: FridgeSearch
+options:
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+
+targets:
+  FridgeSearch:
+    type: application
+    platform: iOS
+    scheme: {}
+    sources:
+      - path: FridgeSearch
+      - path: ../bridge
+      - path: ../src
+        excludes:
+          - synthetic.cpp
+      - path: ../include
+        buildPhase: none
+      - path: ../data/sample_recipes.tsv
+        buildPhase: resources
+      # Bundled when present (run scripts/prepare_foodcom.py first).
+      - path: ../data/foodcom.tsv
+        buildPhase: resources
+        optional: true
+    settings:
+      base:
+        # Change "yourname" to something unique to run on a real iPhone.
+        PRODUCT_BUNDLE_IDENTIFIER: com.yourname.FridgeSearch
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Fridge Search
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGN_STYLE: Automatic
+        SWIFT_OBJC_BRIDGING_HEADER: FridgeSearch/FridgeSearch-Bridging-Header.h
+        HEADER_SEARCH_PATHS:
+          - "$(SRCROOT)/../include"
+          - "$(SRCROOT)/../bridge"
+        CLANG_CXX_LANGUAGE_STANDARD: c++17
